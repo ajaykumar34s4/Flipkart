@@ -12,7 +12,7 @@ const LoginPage = () => {
 
   const goToHome = async () => {
     try {
-      const response = await axios.post("http://localhost:3000/logindata", {
+      const response = await axios.post("https://flipkart-r9ck.onrender.com/logindata", {
         email,
         password,
       });

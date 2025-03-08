@@ -36,7 +36,7 @@ app.use(loginrouter);
 app.use(passwordRouter);
 app.use(addressRouter)
 app.use(cartRouter);
-
-app.listen(3000, () => {
+const PORT=process.env.PORT;
+app.listen(PORT, () => {
   console.log("Server is running on http://localhost:3000");
 }); 

@@ -1,5 +1,5 @@
 
-const BASE_URL = "http://localhost:3000";
+const BASE_URL = "https://flipkart-r9ck.onrender.com";
 export const products = [
   {
     category: "Clothes",

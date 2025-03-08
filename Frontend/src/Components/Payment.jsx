@@ -16,7 +16,7 @@ const Payment = () => {
 
   useEffect(() => {
     const storedid = localStorage.getItem("id");
-    axios.get("http://localhost:3000/addressget")
+    axios.get("https://flipkart-r9ck.onrender.com/addressget")
       .then((response) => {
         const addressData = response?.data?.data || [];
         setAddress(addressData.filter((item) => item.id == storedid));
@@ -26,7 +26,7 @@ const Payment = () => {
 
   useEffect(() => {
     const storedid = localStorage.getItem("id");
-    axios.get("http://localhost:3000/getcartitems")
+    axios.get("https://flipkart-r9ck.onrender.com/getcartitems")
       .then((response) => {
         const cartdata = response?.data?.data || [];
         setCart(cartdata.filter(item => item.id === storedid));
@@ -45,7 +45,7 @@ const Payment = () => {
   const deleteItem = async (index) => {
     try {
       const itemToRemove = cart[index];
-      const response = await axios.delete(`http://localhost:3000/deletedata/${itemToRemove._id}`);
+      const response = await axios.delete(`https://flipkart-r9ck.onrender.com/deletedata/${itemToRemove._id}`);
       if (response.status === 200) {
         setCart(cart.filter((_, i) => i !== index));
       }

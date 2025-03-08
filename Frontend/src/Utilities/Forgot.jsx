@@ -80,7 +80,7 @@ const Forgot = () => {
 
     setLoading(true); // Show loading
     try {
-      const response = await fetch(`http://localhost:3000/updatepassword`, {
+      const response = await fetch(`https://flipkart-r9ck.onrender.com/updatepassword`, {
         method: "PUT",
         headers: {
           "Content-Type": "application/json",
